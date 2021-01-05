@@ -14,13 +14,13 @@ nameElement.style.color = 'lightblue';
 button.addEventListener("click", function () {
   console.log('works');
   socket.emit('chat', {
-    message: message.value,
-    handle: handle.value
+    message: message.value // handle: handle.value
+
   });
+  message.innerHTML == "";
 }); //12 listening for the events
 
 socket.on('chat', function (data) {
-  output.innerHTML += '<h3>' + data.handle.charAt(0).toUpperCase() + data.handle.slice(1) + ': ' + '</h3>' + '<p>' + data.message.charAt(0).toUpperCase() + data.message.slice(1) + '</p>'; // output.appendChild(nameElement);
-  // output.appendChild(messageElement);
-  // output.innerHTML += '<p>' + data.handle + ': ' + data.message + '</p>'; 
+  // output.innerHTML += '<h3>' + data.handle.charAt(0).toUpperCase()+data.handle.slice(1) + ': ' + '</h3>' + '<p>' + data.message.charAt(0).toUpperCase()+data.message.slice(1) + '</p>';
+  output.innerHTML += '<p>' + data.message.charAt(0).toUpperCase() + data.message.slice(1) + '</p>';
 });
