@@ -11,11 +11,13 @@ body {
     height: 100vh;
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     article {
         width: 95vw;
-        height: 100vh;
+        height: 95vh;
+        border-radius: 10px;
         background-color: #F2F2F2;
         flex-direction: column;
         display: flex;
@@ -37,10 +39,14 @@ body {
             flex-direction: column;
             display: flex;
             overflow: auto;
-                p {
+                h4 {
                     font-size: 25px;
-                    margin: 0.2vh;
+                    margin: 0.3vh;
                     color: #2F3237;
+                    width: max-content;
+                    padding: 3px;
+                    border-radius: 10px;
+                    background-color: rgba($color: #2593D9, $alpha: 0.8) ;
                 }
                 h3 {
                     font-size: 30px;
@@ -52,7 +58,7 @@ body {
         flex-direction: row;
         display: flex;
         justify-content: space-around;
-        width: 90vw;
+        width: 80vw;
             input {
                 width: 100%;
                 height: 5vh;
