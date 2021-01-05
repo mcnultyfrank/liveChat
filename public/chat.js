@@ -8,6 +8,11 @@ const handle = document.querySelector(".handle");
 const message = document.querySelector(".message");
 const button = document.querySelector(".send");
 const output = document.querySelector('.textOutput');
+let nameElement = document.createElement('p');
+let messageElement = document.createElement ('h3');
+nameElement.style.color = 'lightblue'
+
+
 
 
 button.addEventListener("click", () => {
@@ -20,5 +25,9 @@ button.addEventListener("click", () => {
 
 //12 listening for the events
 socket.on('chat', (data) => {
-    output.innerHTML += '<p>' + data.handle + ': ' + data.message + '</p>'; 
+    output.innerHTML += '<h3>' + data.handle.charAt(0).toUpperCase()+data.handle.slice(1) + ': ' + '</h3>' + '<p>' + data.message.charAt(0).toUpperCase()+data.message.slice(1) + '</p>';
+    // output.appendChild(nameElement);
+    // output.appendChild(messageElement);
+
+    // output.innerHTML += '<p>' + data.handle + ': ' + data.message + '</p>'; 
 })
