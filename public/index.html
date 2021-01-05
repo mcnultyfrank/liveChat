@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- 7 load in library in top of html-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js" integrity="sha512-MVIvu+RrRZ8i4gxYMF/87ww/ErVLaW+O1lMHUpNTn0lW5NVXhxALXkQ1vnQbzpalm5eXVhzSmF7Rzf7JVoBhTQ==" crossorigin="anonymous"></script>    <title>liveChat WebSocket</title>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>liveChat</h1>
+        </header>
+        <section class="textOutput">
+        </section>
+        <section class="textInput">
+            <input class ="handle" type="text" placeholder="Name..."/>
+            <input class ="message" type="text" placeholder="Message..."/>
+            <button class ="send">Send</button>
+        </section>
+    </article>
+    <script src="./chat.js"></script>
+</body>
+</html>
