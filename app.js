@@ -14,7 +14,6 @@ let server = app.listen(port, () => {
     console.log(`server is running on ${port}`);
 }); 
 
-
 app.use(express.static('public'));
 
 //5. new variable = socket() with server variable passed in
@@ -22,7 +21,7 @@ let io = socket(server);
 
 // 6 listening out for connection, once made fire back callback
 io.on('connection', (socket) => {
-    console.log('made socket connection yaheeee', socket.id);
+    console.log('socket id =', socket.id, 'connection is', socket.connected);
 
     //9. listen for message being sent from the client
     socket.on('chat', (data) => {

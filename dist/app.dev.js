@@ -18,7 +18,7 @@ app.use(express["static"]('public')); //5. new variable = socket() with server v
 var io = socket(server); // 6 listening out for connection, once made fire back callback
 
 io.on('connection', function (socket) {
-  console.log('made socket connection yaheeee', socket.id); //9. listen for message being sent from the client
+  console.log('socket id =', socket.id, 'connection is', socket.connected); //9. listen for message being sent from the client
 
   socket.on('chat', function (data) {
     //10. send message out to all clients on socket
