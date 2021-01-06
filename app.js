@@ -4,7 +4,6 @@ const express = require('express');
 //4 add socket io to work with web sockets
 const socket = require('socket.io');
 
-
 //1. express app created
 const app = express();
 const port = 8000;
@@ -28,6 +27,11 @@ io.on('connection', (socket) => {
         //10. send message out to all clients on socket
         //11. we want to emit message with the data to all clients
         io.sockets.emit('chat', data)
+    })
+    //13. broadcasts user
+    socket.on('typing', (data) => { 
+        console.log(socket.broadcast.emit());
+        socket.broadcast.emit('typing', data);        
     })
 });  
 

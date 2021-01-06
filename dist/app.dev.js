@@ -24,5 +24,10 @@ io.on('connection', function (socket) {
     //10. send message out to all clients on socket
     //11. we want to emit message with the data to all clients
     io.sockets.emit('chat', data);
+  }); //13. broadcasts user
+
+  socket.on('typing', function (data) {
+    console.log(socket.broadcast.emit());
+    socket.broadcast.emit('typing', data);
   });
 });

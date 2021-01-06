@@ -9,6 +9,7 @@
 body {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -24,6 +25,7 @@ body {
         align-items: center;
         header {
             h1 {
+                font-size: 13px;
                 color: #F2F2F2;
                 background-color:#D93B3B ;
                 margin-top: 2vh;
@@ -40,14 +42,15 @@ body {
             display: flex;
             overflow: auto;
                 h4 {
-                    font-size: 25px;
-                    margin: 0.3vh;
+                    font-size: 15px;
+                    margin: 0.5vh;
                     color: #2F3237;
                     width: max-content;
-                    padding: 3px;
+                    padding: 5px;
                     border-radius: 10px;
                     background-color: rgba($color: #2593D9, $alpha: 0.8) ;
                 }
+                
                 h3 {
                     font-size: 30px;
                     margin: 0.2vh;
